@@ -9,6 +9,7 @@
     //ua.customtable.insert event is triggered when a new custom table is created.
     var tableName = event.parm1.toString();
     var tableScope = '';
+    
     var getNewTable = new GlideRecord('sys_db_object');
     getNewTable.addEncodedQuery('name=' + tableName);
     getNewTable.setLimit(1);
@@ -45,6 +46,7 @@
         return isParentTask(parentTable);
     }
 
+    //now create overrides
     function createOverride(scope, table, column, overrideRead, setReadOnly, overrideRef, refQual) {
         var overrideGR = new GlideRecord('sys_dictionary_override');
         overrideGR.newRecord();
