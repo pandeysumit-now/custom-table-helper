@@ -4,6 +4,8 @@
     	- set number field to readonly
     	- over-ride reference qualifier for assignment_group & assigned_to
     This script action just does that!
+
+    Why not put this in business rule? Well, weirdly business rules don't trigger when new custom table is created through App Engine Studio
     */
 
     //ua.customtable.insert event is triggered when a new custom table is created.
